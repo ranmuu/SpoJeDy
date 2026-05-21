@@ -38,6 +38,10 @@ const formatTime = (time) => {
     .padStart(2, '0')
   return `${mins}:${secs}`
 }
+
+const goToVideo = (id) => {
+  router.push('/video/' + id) // Assumes your video route uses a similar id parameter pattern
+}
 </script>
 
 <template>
@@ -71,26 +75,35 @@ const formatTime = (time) => {
   </div>
 
   <div
-    class="relative min-h-screen overflow-hidden text-black dark:text-white transition-colors duration-300"
+    class="relative min-h-[90vh] overflow-hidden text-black dark:text-white transition-colors duration-300"
   >
     <!-- Fullscreen ambient glow spotlights in the background (perfectly matches VideoDetailView) -->
     
     <!-- Main Layout Grid (2 Columns on Large Screens) -->
-    <div class="relative max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[20vh]">
+    <div class="relative max-w-8xl mx-auto p-15 grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[20vh]">
       <!-- LEFT PANEL: Premium Audio Control Station (Takes up 2/3 of screen width) -->
       <div
         v-if="audioStore.currentSong"
         class="lg:col-span-2 flex flex-col bg-white/40 dark:bg-white/5 backdrop-blur-2xl border border-white/20 dark:border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl items-center justify-center"
       >
         <!-- Back Navigation Link -->
-        <div class="w-full mb-4">
+        <div class="w-full mb-6 flex items-center justify-between">
           <RouterLink
             to="/"
-            class="text-gray-500 hover:text-green-500 dark:hover:text-emerald-400 transition font-medium flex items-center gap-1 "
+            class="text-gray-500 hover:text-green-500 dark:hover:text-emerald-400 transition font-semibold text-sm flex items-center gap-1 group"
           >
-            ← Back to Library
+            <span class="group-hover:-translate-x-0.5 transition-transform">←</span> Back to Library
           </RouterLink>
+
+          <button
+            @click="goToVideo(audioStore.currentSong.id)"
+            class="text-gray-500 hover:text-green-500 dark:hover:text-emerald-400 transition font-semibold text-sm flex items-center gap-1 group"
+          >
+            <span class="group-hover:translate-x-0.5 transition-transform">See Music Video </span>
+          </button>
         </div>
+
+        
 
         <!-- Artwork Image -->
         <div
@@ -110,7 +123,7 @@ const formatTime = (time) => {
 
         <!-- Song Metadata -->
         <div class="text-center mb-8 w-full">
-          <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight">
+          <h1 class="text-2xl md:text-3xl font-bold tracking-tight">
             {{ audioStore.currentSong.title }}
           </h1>
           <p class="text-lg text-green-600 dark:text-emerald-400 font-semibold">

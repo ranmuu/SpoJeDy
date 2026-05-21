@@ -50,7 +50,7 @@ const videoList = [
 
   
   <div>
-    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+    <div class="pointer-events-none absolute inset-0">
       <div
         class="absolute left-30 top-30 w-96 h-96 rounded-full bg-emerald-600/20 dark:bg-emerald-400/15 blur-3xl -translate-x-1/2 -translate-y-1/2"
       ></div>
@@ -65,14 +65,14 @@ const videoList = [
         </h1>
       </div>
 
-    <div class="relative z-10 px-6 py-6 max-w-6xl mx-auto">
+    <div class="relative z-10 px-10 py-1 max-w-6xl mx-auto">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <RouterLink
           v-for="video in videoList"
           :key="video.id"
           :to="'/video/' + video.id"
-          class="group relative bg-white/20 dark:bg-slate-950/40 backdrop-blur-2xl border border-white/10 dark:border-white/10 rounded-3xl p-4 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20 hover:border-emerald-500/30 transition-all duration-300 cursor-pointer overflow-hidden"
+          class="group relative bg-white/20 dark:bg-slate-950/40 backdrop-blur-2xl border border-white/10 dark:border-white/10 rounded-2xl p-4 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20 hover:border-emerald-500/30 transition-all duration-300 cursor-pointer overflow-hidden"
         >
           <div
             class="relative overflow-hidden aspect-video rounded-2xl border border-white/10 bg-black/5 dark:bg-white/5 shadow-md shadow-black/10 mb-4"

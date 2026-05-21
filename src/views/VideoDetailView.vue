@@ -74,29 +74,42 @@ watch(() => route.params.id, (newId) => {
   videoId.value = newId
   loadVideoData(newId)
 })
+
+const goToSongDetails = (id) => {
+  if (id) {
+    router.push('/song/' + id)
+  }
+}
 </script>
 
 <template>
-  <!-- Fullscreen ambient glow spotlights in the background -->
+  
+  <div>
+    <!-- Fullscreen ambient glow spotlights in the background -->
     <div class="pointer-events-none absolute inset-0 overflow-hidden">
       <div class="absolute top-10 left-10 w-80 h-80 rounded-full bg-emerald-400/10 dark:bg-emerald-400/5 blur-3xl -translate-x-1/4 -translate-y-1/4"></div>
       <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl translate-x-1/4 translate-y-1/4"></div>
     </div>
-  <div class="relative min-h-screen overflow-hidden text-black dark:text-white transition-colors duration-300">
-    
     
 
     <!-- Main Layout Grid (2 Columns on Large Screens) -->
-    <div class="relative max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[80vh]">
+    <div class="relative max-w-7xl text-black dark:text-white mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[80vh]">
       
       <!-- LEFT PANEL: Cinema Video Station (Takes up 2/3 of the screen width) -->
-      <div class="lg:col-span-2 flex flex-col bg-white/40 dark:bg-white/5 backdrop-blur-2xl border border-white/20 dark:border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl">
+      <div class="lg:col-span-2 flex flex-col  bg-white/40 dark:bg-white/5 backdrop-blur-2xl border border-white/20 dark:border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl">
         
         <!-- Back Navigation Link -->
-        <div class="w-full mb-6">
-          <RouterLink to="/videos" class="text-gray-500 hover:text-green-500 dark:hover:text-emerald-400 transition font-medium flex items-center gap-1">
-            ← Back to Videos
+        <div class="w-full mb-6 flex items-center justify-between">
+          <RouterLink to="/videos" class="text-gray-500 hover:text-green-500 dark:hover:text-emerald-400 transition font-semibold text-sm flex items-center gap-1 group">
+            <span class="group-hover:-translate-x-0.5 transition-transform">←</span> Back to Videos
           </RouterLink>
+
+          <button
+            @click="goToSongDetails(videoData.id)"
+            class="text-gray-500 hover:text-green-500 dark:hover:text-emerald-400 transition font-semibold text-sm flex items-center gap-1 group"
+          >
+            <span class="group-hover:translate-x-0.5 transition-transform">See Music Details </span>
+          </button>
         </div>
 
         <!-- Youtube Video Player Section -->

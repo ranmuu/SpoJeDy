@@ -62,7 +62,7 @@ const selectSong = (id) => {
       class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl translate-x-1/4 translate-y-1/4"
     ></div>
   </div>
-  <div class="relative min-h-[70vh] py-6 overflow-hidden">
+  <div class="relative min-h-[70vh] py-6">
     <div class="relative z-10">
       <!-- Header Section -->
       <div class="mb-10 max-w-2xl">
