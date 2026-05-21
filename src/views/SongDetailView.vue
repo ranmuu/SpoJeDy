@@ -50,10 +50,10 @@ const goToVideo = (id) => {
         class="absolute left-30 top-30 w-96 h-96 rounded-full bg-emerald-600/20 dark:bg-emerald-400/15 blur-3xl -translate-x-1/2 -translate-y-1/2"
       ></div>
       <div
-        class="absolute left-190 top-90 w-96 h-96 rounded-full bg-emerald-400/25 dark:bg-emerald-400/15 blur-3xl -translate-x-1/2 -translate-y-1/2"
+        class="absolute left-190 top-90 w-96 h-96 rounded-full bg-emerald-400/25 dark:bg-emerald-400/30 blur-3xl -translate-x-1/2 -translate-y-1/2"
       ></div>
       <div
-        class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl translate-x-1/4 translate-y-1/4"
+        class="absolute bottom-35 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/10 blur-3xl translate-x-1/4 translate-y-1/4"
       ></div>
     </div>
 
@@ -77,7 +77,6 @@ const goToVideo = (id) => {
   <div
     class="relative min-h-[90vh] overflow-hidden text-black dark:text-white transition-colors duration-300"
   >
-    <!-- Fullscreen ambient glow spotlights in the background (perfectly matches VideoDetailView) -->
     
     <!-- Main Layout Grid (2 Columns on Large Screens) -->
     <div class="relative max-w-8xl mx-auto p-15 grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[20vh]">

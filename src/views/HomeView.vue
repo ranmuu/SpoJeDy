@@ -59,7 +59,7 @@ const selectSong = (id) => {
       class="absolute left-30 top-30 w-96 h-96 rounded-full bg-emerald-600/20 dark:bg-emerald-400/15 blur-3xl -translate-x-1/2 -translate-y-1/2"
     ></div>
     <div
-      class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl translate-x-1/4 translate-y-1/4"
+      class="absolute bottom-35 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/10 blur-3xl translate-x-1/4 translate-y-1/4"
     ></div>
   </div>
   <div class="relative min-h-[70vh] py-6">
@@ -80,7 +80,7 @@ const selectSong = (id) => {
           v-for="song in songs"
           :key="song.id"
           @click="selectSong(song.id)"
-          class="group relative bg-white/10 dark:bg-slate-900/40 backdrop-blur-3xl border border-white/20 dark:border-white/10 rounded-4xl p-4 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/15 dark:hover:shadow-emerald-500/5 hover:-translate-y-2 hover:border-emerald-500/30 dark:hover:border-emerald-500/30 transition-all duration-500 ease-out cursor-pointer overflow-hidden"
+          class="group relative bg-white/10 dark:bg-slate-900/40 backdrop-blur-3xl border border-white/20 dark:border-white/10 rounded-2xl p-4 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/15 dark:hover:shadow-emerald-500/5 hover:-translate-y-2 hover:border-emerald-500/30 dark:hover:border-emerald-500/30 transition-all duration-500 ease-out cursor-pointer overflow-hidden"
         >
           <!-- Shiny light reflection highlight on hover -->
           <div

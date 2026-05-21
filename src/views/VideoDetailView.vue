@@ -88,7 +88,7 @@ const goToSongDetails = (id) => {
     <!-- Fullscreen ambient glow spotlights in the background -->
     <div class="pointer-events-none absolute inset-0 overflow-hidden">
       <div class="absolute top-10 left-10 w-80 h-80 rounded-full bg-emerald-400/10 dark:bg-emerald-400/5 blur-3xl -translate-x-1/4 -translate-y-1/4"></div>
-      <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+      <div class="absolute bottom-30 right-10 w-96 h-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl translate-x-1/4 translate-y-1/4"></div>
     </div>
     
 
