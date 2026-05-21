@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* This tells Tailwind v4: "Only go dark if I manually add the .dark class" */
+@theme {
+  --color-background: white;
+}
+
+/* Force Tailwind to use the 'dark' class selector */
+@custom-variant dark (&:where(.dark, .dark *));
